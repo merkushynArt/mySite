@@ -15,6 +15,7 @@ body {
    font-size: 16px;
    line-height: 24px;
    color: #fff;
+   overflow: hidden;
 }
 
 .container {
@@ -24,11 +25,13 @@ body {
 
 /*header=====================================================================================================================*/
 .header{
-   padding-top: 15px;
+   padding: 10px 0;
+   background: #0a0a0a;
    position: fixed;
    top: 0;
    left: 0;
    width: 100%;
+   z-index: 10;
 
    &__items {
       display: flex;
@@ -42,13 +45,14 @@ body {
       border: 2px solid #fff;
       border-radius: 50%;
       padding: 5px;
+      background: #000;
       position: relative;
 
       &:hover {
          
          &::before {
-            width: 130%;
-            height: 130%;
+            width: 128%;
+            height: 128%;
          }
       }
 
@@ -56,13 +60,14 @@ body {
          content: '';
          width: 100%;
          height: 100%;
-         border: 2px solid #969696;
+         border: 1px solid #fff;
          position: absolute;
          top: 50%;
          left: 50%;
          transform: translate(-50%,-50%);
          z-index: -1;
          border-radius: 50%;
+         background: #000;
          transition: all .2s linear;
       }
 
@@ -125,50 +130,62 @@ body {
    }
 }
 
+.mobile-menu__btn {
+   display: none;
+   width: 50px;
+   height: 20px;
+   background: transparent;
+   position: relative;
+   border: none;
+   z-index: 10;
+
+   &::before {
+      content: '';
+      width: 100%;
+      height: 5px;
+      border-radius: 50px;
+      background: #fff;
+      position: absolute;
+      top: 0;
+      left: 0;
+      transition: all .2s linear;
+   }
+
+   &::after {
+      content: '';
+      width: 100%;
+      height: 5px;
+      border-radius: 50px;
+      background: #fff;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      transition: all .2s linear;
+   }
+
+   &.active {
+      &::before {
+         top: 15px;
+      }
+      &::after {
+         bottom: 15px;
+      }
+   }
+}
+
 .mobile-menu {
    position: fixed;
-   top: 79px;
-   right: -245px;
-   padding-right: 10px;
-   padding-left: 10px;
+   top: 60px;
+   right: -250px;
+   padding: 20px 10px;
    border-left: 1px solid #fff;
-   height: calc(100vh - 79px);
+   height: calc(100vh - 60px);
    background: #000;
    transition: all .2s linear;
+   display: none;
 
    &.active {
       right: 0;
-   }
-
-   &__btn {
-      display: none;
-      width: 50px;
-      height: 20px;
-      background: transparent;
-      position: relative;
-      border: none;
-
-      &::before {
-         content: '';
-         width: 100%;
-         height: 5px;
-         border-radius: 50px;
-         background: #fff;
-         position: absolute;
-         top: 0;
-         left: 0;
-      }
-
-      &::after {
-         content: '';
-         width: 100%;
-         height: 5px;
-         border-radius: 50px;
-         background: #fff;
-         position: absolute;
-         bottom: 0;
-         left: 0;
-      }
    }
 
    &__nav {
@@ -194,13 +211,19 @@ body {
       .mobile-menu__social {
          display: flex;
          justify-content: space-between;
+         align-items: center;
          width: 150px;
          margin: 0 auto 20px;
 
-         .icon {
-            fill: #fff;
-            width: 30px;
-            height: 30px;
+         &-item {
+            font-size: 0;
+            line-height: 0;
+            
+            .icon {
+               fill: #fff;
+               width: 30px;
+               height: 30px;
+            }
          }
       }
    }
@@ -214,6 +237,17 @@ body {
 
 @media(max-width: 600px) {
    .header {
+      padding: 5px 0;
+
+      &__logo-big {
+         font-size: 36px;
+         line-height: 36px;
+      }
+      &__logo-small {
+         font-size: 14px;
+         line-height: 14px;
+      }
+
       &__nav {
          display: none;
       }
@@ -223,4 +257,7 @@ body {
       }
    }
    
+   .mobile-menu {
+      display: block;
+   }
 }
