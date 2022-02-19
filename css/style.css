@@ -1,0 +1,245 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+body {
+  background: #000;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  color: #fff;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/*header=====================================================================================================================*/
+.header {
+  padding-top: 15px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.header__items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header__logo {
+  text-decoration: none;
+  display: inline-block;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  padding: 5px;
+  position: relative;
+}
+
+.header__logo:hover::before {
+  width: 130%;
+  height: 130%;
+}
+
+.header__logo::before {
+  content: '';
+  width: 100%;
+  height: 100%;
+  border: 2px solid #969696;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  z-index: -1;
+  border-radius: 50%;
+  -webkit-transition: all .2s linear;
+  transition: all .2s linear;
+}
+
+.header__logo-big {
+  font-size: 50px;
+  line-height: 50px;
+  font-weight: bold;
+  color: #690069;
+  padding: 0 3px;
+}
+
+.header__logo-small {
+  font-size: 20px;
+  line-height: 20px;
+  position: absolute;
+  bottom: 10px;
+  left: 5px;
+}
+
+.header__nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 400px;
+  overflow: hidden;
+}
+
+.header__nav-item {
+  font-size: 18px;
+  line-height: 18px;
+  color: #969696;
+  position: relative;
+  height: 18px;
+}
+
+.header__nav-item:hover .hover-item1 {
+  -webkit-transform: translateY(-20px);
+          transform: translateY(-20px);
+}
+
+.header__nav-item:hover .hover-item2 {
+  bottom: 0px;
+}
+
+.header__nav-item span {
+  display: block;
+}
+
+.header__nav-item .hover-item1 {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  -webkit-transition: all .2s linear;
+  transition: all .2s linear;
+}
+
+.header__nav-item .hover-item2 {
+  position: absolute;
+  bottom: -20px;
+  color: #fff;
+  -webkit-transition: all .2s linear;
+  transition: all .2s linear;
+}
+
+.mobile-menu {
+  position: fixed;
+  top: 79px;
+  right: -245px;
+  padding-right: 10px;
+  padding-left: 10px;
+  border-left: 1px solid #fff;
+  height: calc(100vh - 79px);
+  background: #000;
+  -webkit-transition: all .2s linear;
+  transition: all .2s linear;
+}
+
+.mobile-menu.active {
+  right: 0;
+}
+
+.mobile-menu__btn {
+  display: none;
+  width: 50px;
+  height: 20px;
+  background: transparent;
+  position: relative;
+  border: none;
+}
+
+.mobile-menu__btn::before {
+  content: '';
+  width: 100%;
+  height: 5px;
+  border-radius: 50px;
+  background: #fff;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.mobile-menu__btn::after {
+  content: '';
+  width: 100%;
+  height: 5px;
+  border-radius: 50px;
+  background: #fff;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.mobile-menu__nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+  font-size: 20px;
+  line-height: 20px;
+}
+
+.mobile-menu__nav-item {
+  margin-bottom: 20px;
+}
+
+.mobile-menu__contacts {
+  text-align: center;
+}
+
+.mobile-menu__contacts-item {
+  display: block;
+  margin-bottom: 20px;
+}
+
+.mobile-menu__contacts .mobile-menu__social {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 150px;
+  margin: 0 auto 20px;
+}
+
+.mobile-menu__contacts .mobile-menu__social .icon {
+  fill: #fff;
+  width: 30px;
+  height: 30px;
+}
+
+@media (max-width: 1210px) {
+  .container {
+    padding: 0 10px;
+  }
+}
+
+@media (max-width: 600px) {
+  .header__nav {
+    display: none;
+  }
+  .header .mobile-menu__btn {
+    display: block;
+  }
+}
+/*# sourceMappingURL=style.css.map */
