@@ -5,3 +5,5 @@ mobBtn.onclick = function() {
    mobBtn.classList.toggle('active');
    mobMenu.classList.toggle('active');
 }
+
+
