@@ -272,7 +272,7 @@ var trans = {
     }.bind(this));
     window.addEventListener('touchstart', function(e) {
       e.preventDefault();
-      for (var i = 0; i < 100; i++) {
+      for (var i = 0; i < 1; i++) {
         this.add();
       }
     }.bind(this));
