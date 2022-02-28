@@ -299,6 +299,11 @@ canvas{
 /*main======================================================================================================================*/
 .main {
    margin-bottom: 0;
+   height: 100vh;
+   padding-top: 84px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
 
    .show-more {
       position: relative;
@@ -306,11 +311,7 @@ canvas{
    }
 
    &__items {
-      height: 100vh;
-      padding-top: 84px;
-      display: flex;
-      justify-content: center;
-      flex-direction: column;
+      max-width: 570px;
    }
 
    &__title {
@@ -410,7 +411,7 @@ canvas{
 
 
 @media(max-width: 768px) {
-   .main__items {
+   .main {
       height: 500px;
    }
 
@@ -420,6 +421,10 @@ canvas{
 }
 
 @media(max-width: 600px) {
+   section {
+      margin-bottom: 50px;
+   }
+
    .title {
       font-size: 30px;
       line-height: 30px;
@@ -462,11 +467,8 @@ canvas{
    }
 
    .main {
-
-      &__items {
-         padding-top: 60px;
-         height: 360px;
-      }
+      padding-top: 60px;
+      height: 360px;
 
       &__title {
          font-size: 40px;
