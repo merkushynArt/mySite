@@ -19,9 +19,19 @@ body {
    background: #000;
 }
 
+section {
+   margin-bottom: 100px;
+}
+
 .container {
    max-width: 1200px;
    margin: 0 auto;
+}
+
+.title {
+   font-size: 50px;
+   line-height: 60px;
+   margin-bottom: 20px;
 }
 
 .show-more {
@@ -288,6 +298,7 @@ canvas{
 
 /*main======================================================================================================================*/
 .main {
+   margin-bottom: 0;
 
    .show-more {
       position: relative;
@@ -315,12 +326,88 @@ canvas{
    }
 }
 
+/*==========================================================================================================================*/
+.services {
+
+   .title {
+      text-align: center;
+   }
+
+   &__items {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+   }
+
+   &__item{
+      width: 500px;
+      height: 300px;
+
+      &:first-child {
+         margin-right: 20px;
+      }
+
+      &-text {
+         font-size: 20px;
+         margin-bottom: 20px;
+      }
+
+      img {
+         width: inherit;
+         height: inherit;
+         object-fit: cover;
+      }
+   }
+}
+
+
 /*===========================================================================================================================*/
 @media(max-width: 1210px) {
    .container {
       padding: 0 10px;
    }
 }
+
+@media(max-width: 1024px) {
+   .services {
+      &__item {
+         width: 400px;
+      }
+   }
+}
+
+@media(max-width: 821px) {
+   .services {
+      &__items {
+         display: block;
+         position: relative;
+      }
+
+      &__item {
+         width: 100%;
+         height: auto;
+         margin: 0 auto;
+
+         img {
+            opacity: .35;
+         }      
+
+         &:last-child {
+            position: absolute;
+            top: 50%;
+            right: 50%;
+            transform: translate(50%, -50%);
+            max-width: 500px;
+         }
+
+         img {
+            width: 100%;
+         }
+      }
+   }
+}
+
+
 
 @media(max-width: 768px) {
    .main__items {
@@ -333,6 +420,11 @@ canvas{
 }
 
 @media(max-width: 600px) {
+   .title {
+      font-size: 30px;
+      line-height: 30px;
+   }
+
    .show-more {
       width: 60px;
       height: 60px;
@@ -385,6 +477,25 @@ canvas{
          font-size: 20px;
          line-height: 20px;
       }
+   }
+
+   .services {
+      &__item {
+
+         img {
+            opacity: 1;
+         }
+
+         &:last-child {
+            margin-top: 5px;
+            position: static;
+            top: 0;
+            left: 0;
+            transform: translate(0,0);
+            max-width: 100%;
+         }
+      }
+      
    }
 }
 

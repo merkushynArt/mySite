@@ -20,9 +20,19 @@ body {
   background: #000;
 }
 
+section {
+  margin-bottom: 100px;
+}
+
 .container {
   max-width: 1200px;
   margin: 0 auto;
+}
+
+.title {
+  font-size: 50px;
+  line-height: 60px;
+  margin-bottom: 20px;
 }
 
 .show-more {
@@ -317,6 +327,10 @@ canvas {
 }
 
 /*main======================================================================================================================*/
+.main {
+  margin-bottom: 0;
+}
+
 .main .show-more {
   position: relative;
   z-index: 5;
@@ -349,10 +363,80 @@ canvas {
   line-height: 30px;
 }
 
+/*==========================================================================================================================*/
+.services .title {
+  text-align: center;
+}
+
+.services__items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.services__item {
+  width: 500px;
+  height: 300px;
+}
+
+.services__item:first-child {
+  margin-right: 20px;
+}
+
+.services__item-text {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.services__item img {
+  width: inherit;
+  height: inherit;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
 /*===========================================================================================================================*/
 @media (max-width: 1210px) {
   .container {
     padding: 0 10px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .services__item {
+    width: 400px;
+  }
+}
+
+@media (max-width: 821px) {
+  .services__items {
+    display: block;
+    position: relative;
+  }
+  .services__item {
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+  }
+  .services__item img {
+    opacity: .35;
+  }
+  .services__item:last-child {
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    -webkit-transform: translate(50%, -50%);
+            transform: translate(50%, -50%);
+    max-width: 500px;
+  }
+  .services__item img {
+    width: 100%;
   }
 }
 
@@ -366,6 +450,10 @@ canvas {
 }
 
 @media (max-width: 600px) {
+  .title {
+    font-size: 30px;
+    line-height: 30px;
+  }
   .show-more {
     width: 60px;
     height: 60px;
@@ -406,6 +494,18 @@ canvas {
   .main__subtitle {
     font-size: 20px;
     line-height: 20px;
+  }
+  .services__item img {
+    opacity: 1;
+  }
+  .services__item:last-child {
+    margin-top: 5px;
+    position: static;
+    top: 0;
+    left: 0;
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+    max-width: 100%;
   }
 }
 
