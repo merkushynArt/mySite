@@ -38,13 +38,13 @@ section {
    width: 80px;
    height: 80px;
    border: 2px solid #fff;
+   background: #000;
    border-radius: 50%;
    display: flex;
    justify-content: center;
    align-items: center;
    position: relative;
    z-index: 1;
-   margin-left: 330px;
 
    &:hover {
       
@@ -307,6 +307,7 @@ canvas{
 
    .show-more {
       position: relative;
+      margin-left: 330px;
       z-index: 5;
    }
 
@@ -361,6 +362,54 @@ canvas{
          width: inherit;
          height: inherit;
          object-fit: cover;
+      }
+   }
+}
+
+/*==========================================================================================================================*/
+.main-portfolio {
+   .title {
+      text-align: center;
+   }
+
+   &__items {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+      grid-column-gap: 40px;
+      grid-row-gap: 40px;
+   }
+
+   &__item {
+
+      &-img{
+         position: relative;
+         img {
+            width: 100%;
+            height: auto;
+            max-height: 350px;
+            object-fit: cover;
+         }
+
+         .show-more {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            width: 150px;
+            height: 150px;
+            background: rgba(0, 0, 0, 0.85);
+            
+            &__text {
+               font-size: 30px;
+               line-height: 30px;
+            }
+         }
+      }
+
+      &-title {
+         font-size: 30px;
+         line-height: 46px;
       }
    }
 }
@@ -427,6 +476,41 @@ canvas{
          max-width: 600px;
          width: 100%;
          height: auto;
+         padding: 0 10px;
+      }
+   }
+
+   .main-portfolio {
+
+      &__item-img {
+         .show-more {
+            width: 100px;
+            height: 100px;
+
+            &__text {
+               font-size: 20px;
+               line-height: 20px;
+            }
+         }
+      }
+
+      &__item {
+         &-img {
+            .show-more {
+               width: 100px;
+               height: 100px;
+               margin-left: 0;
+   
+               &__text {
+                  font-size: 20px;
+                  line-height: 20px;
+               }
+            }
+         }
+
+         &-title {
+            font-size: 24px;
+         }
       }
    }
 }
@@ -459,6 +543,13 @@ canvas{
    #canvas {
       display: none;
    }
+
+   .main-portfolio{
+      &__item-title {
+         font-size: 20px;
+         line-height: 30px;
+      }
+   }  
 }
 
 @media(max-width: 600px) {
@@ -469,17 +560,6 @@ canvas{
    .title {
       font-size: 30px;
       line-height: 30px;
-   }
-
-   .show-more {
-      width: 60px;
-      height: 60px;
-      margin-left: 210px;
-
-      &__text {
-         font-size: 12px;
-         line-height: 12px;
-      }
    }
 
    .header {
@@ -520,14 +600,30 @@ canvas{
          font-size: 20px;
          line-height: 20px;
       }
+
+      .show-more {
+         width: 60px;
+         height: 60px;
+         margin-left: 210px;
+   
+         &__text {
+            font-size: 12px;
+            line-height: 12px;
+         }
+      }
    }
 
    .services {
       &__item {
+         &:first-child {
+            height: auto;
 
-         &:first-child::before {
-            display: none;
+            &::before {
+               display: none;
+            }
          }
+
+         
 
 
          &:last-child {
@@ -540,6 +636,22 @@ canvas{
          }
       }
       
+   }
+
+   .main-portfolio {
+      &__items {
+         display: block;
+      }
+
+      &__item {
+         margin: 0 auto;
+         max-width: 400px;
+         margin-bottom: 30px;
+
+         &-title {
+            font-size: 24px;
+         }
+      }
    }
 }
 
@@ -557,6 +669,12 @@ canvas{
       &__title {
          font-size: 33px;
          line-height: 33px;
+      }
+   }
+
+   .main-portfolio {
+      &__item-title {
+         font-size: 20px;
       }
    }
 }
