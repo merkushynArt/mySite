@@ -432,7 +432,7 @@ canvas{
       justify-content: center;
 
       &:first-child {
-         margin-right: 20px;
+         margin-right: 30px;
       }
 
       p {
@@ -454,6 +454,53 @@ canvas{
  .tagcloud--item {
    color: #fff;
  }
+
+/*========================================================================================================================*/
+.contacts {
+   height: 140px;
+   display: flex;
+   align-items: center;
+   position: relative;
+
+   .show-more {
+      width: 100px;
+      height: 100px;
+      background: rgba(10, 10, 10, .95);
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+
+      .icon {
+         width: 50px;
+         height: 50px;
+         fill: #fff;
+      }
+   }
+}
+
+.text-anim {
+   font-size: 60px;
+   line-height: 60px;
+   display: flex;
+   overflow: hidden;
+
+   div {
+      white-space: nowrap;
+      animation: textAnim 15s linear infinite;
+
+      span {
+         display: inline-block;
+         margin: 0 10px;
+         transform: translateY(-50%);
+      }
+   }
+}
+
+@keyframes textAnim {
+	0%   {transform: translateX(0%);}
+	100% {transform: translateX(-100%);}
+}
 
 
 
@@ -706,6 +753,18 @@ canvas{
          text-align: center;
       }
    }
+
+   .contacts {
+      
+
+      .text-anim {
+         font-size: 40px;
+
+         span {
+            transform: translateY(-33%);
+         }
+      }
+   }
 }
 
 @media(max-width: 425px) {
@@ -715,6 +774,20 @@ canvas{
          margin-bottom: 10px;
       }
    } 
+
+   .contacts {
+      height: 100px;
+
+      .show-more {
+         width: 70px;
+         height: 70px;
+
+         .icon {
+            width: 30px;
+            height: 30px;
+         }
+      }
+   }
 }
 
 @media(max-width: 375px) {
