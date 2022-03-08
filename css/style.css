@@ -364,6 +364,51 @@ canvas {
   line-height: 30px;
 }
 
+/*=============================================================================================================================*/
+.text-banner .text-anim {
+  font-size: 60px;
+  line-height: 80px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  overflow: hidden;
+}
+
+.text-banner .text-anim div {
+  white-space: nowrap;
+  -webkit-animation: textAnim 33s linear infinite;
+          animation: textAnim 33s linear infinite;
+}
+
+.text-banner .text-anim div span {
+  display: inline-block;
+  margin: 0 10px;
+  -webkit-transform: translateY(-38%);
+          transform: translateY(-38%);
+}
+
+@-webkit-keyframes textAnim {
+  0% {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+  }
+  100% {
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+  }
+}
+
+@keyframes textAnim {
+  0% {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+  }
+  100% {
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+  }
+}
+
 /*==========================================================================================================================*/
 .services .title {
   text-align: center;
@@ -534,37 +579,26 @@ canvas {
   fill: #fff;
 }
 
-.text-anim {
+.contacts .text-anim {
   font-size: 60px;
-  line-height: 60px;
+  line-height: 80px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   overflow: hidden;
 }
 
-.text-anim div {
+.contacts .text-anim div {
   white-space: nowrap;
-  -webkit-animation: textAnim 15s linear infinite;
-          animation: textAnim 15s linear infinite;
+  -webkit-animation: textAnim 33s linear infinite;
+          animation: textAnim 33s linear infinite;
 }
 
-.text-anim div span {
+.contacts .text-anim div span {
   display: inline-block;
   margin: 0 10px;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
-}
-
-@-webkit-keyframes textAnim {
-  0% {
-    -webkit-transform: translateX(0%);
-            transform: translateX(0%);
-  }
-  100% {
-    -webkit-transform: translateX(-100%);
-            transform: translateX(-100%);
-  }
+  -webkit-transform: translateY(-38%);
+          transform: translateY(-38%);
 }
 
 @keyframes textAnim {
@@ -715,7 +749,7 @@ canvas {
   }
   .main {
     padding-top: 60px;
-    height: 360px;
+    height: 300px;
   }
   .main__title {
     font-size: 40px;
@@ -733,6 +767,13 @@ canvas {
   .main .show-more__text {
     font-size: 12px;
     line-height: 12px;
+  }
+  .text-banner .text-anim {
+    font-size: 40px;
+  }
+  .text-banner .text-anim span {
+    -webkit-transform: translateY(-26%) !important;
+            transform: translateY(-26%) !important;
   }
   .services__item:first-child {
     height: auto;
@@ -771,12 +812,19 @@ canvas {
     font-size: 40px;
   }
   .contacts .text-anim span {
-    -webkit-transform: translateY(-33%);
-            transform: translateY(-33%);
+    -webkit-transform: translateY(-26%) !important;
+            transform: translateY(-26%) !important;
   }
 }
 
 @media (max-width: 425px) {
+  .text-banner .text-anim {
+    font-size: 30px;
+  }
+  .text-banner .text-anim span {
+    -webkit-transform: translateY(-18%) !important;
+            transform: translateY(-18%) !important;
+  }
   .services__item-text {
     font-size: 16px;
     margin-bottom: 10px;
@@ -791,6 +839,13 @@ canvas {
   .contacts .show-more .icon {
     width: 30px;
     height: 30px;
+  }
+  .contacts .text-anim {
+    font-size: 30px;
+  }
+  .contacts .text-anim span {
+    -webkit-transform: translateY(-18%) !important;
+            transform: translateY(-18%) !important;
   }
 }
 

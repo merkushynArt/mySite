@@ -328,6 +328,32 @@ canvas{
    }
 }
 
+/*=============================================================================================================================*/
+.text-banner {
+   .text-anim {
+      font-size: 60px;
+      line-height: 80px;
+      display: flex;
+      overflow: hidden;
+   
+      div {
+         white-space: nowrap;
+         animation: textAnim 33s linear infinite;
+   
+         span {
+            display: inline-block;
+            margin: 0 10px;
+            transform: translateY(-38%);
+         }
+      }
+   }
+   
+   @keyframes textAnim {
+      0%   {transform: translateX(0%);}
+      100% {transform: translateX(-100%);}
+   }
+}
+
 /*==========================================================================================================================*/
 .services {
 
@@ -477,30 +503,32 @@ canvas{
          fill: #fff;
       }
    }
-}
 
-.text-anim {
-   font-size: 60px;
-   line-height: 60px;
-   display: flex;
-   overflow: hidden;
-
-   div {
-      white-space: nowrap;
-      animation: textAnim 15s linear infinite;
-
-      span {
-         display: inline-block;
-         margin: 0 10px;
-         transform: translateY(-50%);
+   .text-anim {
+      font-size: 60px;
+      line-height: 80px;
+      display: flex;
+      overflow: hidden;
+   
+      div {
+         white-space: nowrap;
+         animation: textAnim 33s linear infinite;
+   
+         span {
+            display: inline-block;
+            margin: 0 10px;
+            transform: translateY(-38%);
+         }
       }
+   }
+   
+   @keyframes textAnim {
+      0%   {transform: translateX(0%);}
+      100% {transform: translateX(-100%);}
    }
 }
 
-@keyframes textAnim {
-	0%   {transform: translateX(0%);}
-	100% {transform: translateX(-100%);}
-}
+
 
 
 
@@ -678,7 +706,7 @@ canvas{
 
    .main {
       padding-top: 60px;
-      height: 360px;
+      height: 300px;
 
       &__title {
          font-size: 40px;
@@ -698,6 +726,18 @@ canvas{
          &__text {
             font-size: 12px;
             line-height: 12px;
+         }
+      }
+   }
+
+   .text-banner {
+      
+
+      .text-anim {
+         font-size: 40px;
+
+         span {
+            transform: translateY(-26%) !important;
          }
       }
    }
@@ -761,13 +801,24 @@ canvas{
          font-size: 40px;
 
          span {
-            transform: translateY(-33%);
+            transform: translateY(-26%) !important;
          }
       }
    }
 }
 
 @media(max-width: 425px) {
+   .text-banner {
+
+      .text-anim {
+         font-size: 30px;
+
+         span {
+            transform: translateY(-18%) !important;
+         }
+      }
+   }
+
    .services{
       &__item-text {
          font-size: 16px;
@@ -787,6 +838,15 @@ canvas{
             height: 30px;
          }
       }
+
+      .text-anim {
+         font-size: 30px;
+
+         span {
+            transform: translateY(-18%) !important;
+         }
+      }
+      
    }
 }
 
