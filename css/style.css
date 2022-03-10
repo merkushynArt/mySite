@@ -580,6 +580,8 @@ section {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  overflow: hidden;
+  position: relative;
 }
 
 .experiments__item-content .timer {
@@ -646,6 +648,78 @@ section {
     -webkit-transform: rotate(360deg);
             transform: rotate(360deg);
   }
+}
+
+.experiments__item-content i {
+  position: absolute;
+  height: 100px;
+  background: -webkit-gradient(linear, left top, left bottom, from(transparent), to(#fff));
+  background: linear-gradient(transparent, #fff);
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  -webkit-animation: rainAnim 5s linear infinite;
+          animation: rainAnim 5s linear infinite;
+}
+
+.experiments__item-content i:nth-child(3n + 1) {
+  background: -webkit-gradient(linear, left top, left bottom, from(transparent), to(#690069));
+  background: linear-gradient(transparent, #690069);
+}
+
+.experiments__item-content i:nth-child(3n + 2) {
+  background: -webkit-gradient(linear, left top, left bottom, from(transparent), to(#1900ff));
+  background: linear-gradient(transparent, #1900ff);
+}
+
+@-webkit-keyframes rainAnim {
+  0% {
+    -webkit-transform: translateY(-100px);
+            transform: translateY(-100px);
+  }
+  100% {
+    -webkit-transform: translateY(370px);
+            transform: translateY(370px);
+  }
+}
+
+@keyframes rainAnim {
+  0% {
+    -webkit-transform: translateY(-100px);
+            transform: translateY(-100px);
+  }
+  100% {
+    -webkit-transform: translateY(370px);
+            transform: translateY(370px);
+  }
+}
+
+.experiments__item-content .face,
+.experiments__item-content .text {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background-size: cover;
+  background-position: center;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.experiments__item-content .face {
+  width: 100%;
+  height: 100%;
+  background: url("../images/obama.jpg") center/auto 100% no-repeat;
+}
+
+.experiments__item-content .text {
+  background: url("../images/text.jpg") center/auto 100% no-repeat;
+  mix-blend-mode: multiply;
+  -webkit-animation: text 70s infinite;
+          animation: text 70s infinite;
+  opacity: .8;
 }
 
 .experiments__item-title {

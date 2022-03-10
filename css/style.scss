@@ -505,6 +505,8 @@ section {
          display: flex;
          align-items: center;
          justify-content: center;
+         overflow: hidden;
+         position: relative;
          
 
          .timer {
@@ -561,6 +563,58 @@ section {
             100% {
                transform: rotate(360deg);
             }
+         }
+
+         i {
+            position: absolute;
+            height: 100px;
+            background: linear-gradient(transparent, #fff);
+            border-bottom-left-radius: 5px;
+            border-bottom-right-radius: 5px;
+            animation: rainAnim 5s linear infinite;
+
+            &:nth-child(3n + 1) {
+               background: linear-gradient(transparent, #690069);
+            }
+
+            &:nth-child(3n + 2) {
+               background: linear-gradient(transparent, #1900ff);
+            }
+         }
+
+         @keyframes rainAnim {
+            0% {
+               transform: translateY(-100px);
+            }
+            100% {
+               transform: translateY(370px);
+            }
+         }
+
+         .face,
+         .text {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-size: cover;
+            background-position: center;
+            object-fit: cover;
+         }
+
+         .face {
+            width: 100%;
+            height: 100%;
+            background: url('../images/obama.jpg')center/auto 100% no-repeat;
+         }
+
+         .text {
+            background: url('../images/text.jpg')center/auto 100% no-repeat;
+            mix-blend-mode: multiply;
+            animation: text 70s infinite;
+            opacity: .8;
          }
       }
 
