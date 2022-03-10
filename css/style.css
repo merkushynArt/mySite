@@ -717,9 +717,29 @@ section {
 .experiments__item-content .text {
   background: url("../images/text.jpg") center/auto 100% no-repeat;
   mix-blend-mode: multiply;
-  -webkit-animation: text 70s infinite;
-          animation: text 70s infinite;
+  -webkit-animation: text 14s infinite;
+          animation: text 14s infinite;
   opacity: .8;
+}
+
+@-webkit-keyframes text {
+  0%,
+  100% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 200% 0%;
+  }
+}
+
+@keyframes text {
+  0%,
+  100% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 200% 0%;
+  }
 }
 
 .experiments__item-title {
