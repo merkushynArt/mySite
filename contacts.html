@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,7 +11,6 @@
    <title>byMerkushyn</title>
 </head>
 <body>
-
    <svg display="none">
       <symbol id="instagram" viewBox="0 0 14 15">
          <g>
@@ -47,6 +46,20 @@
          </g>
       </symbol>
    </svg>
+   <svg display="none">
+      <symbol id="attachment" viewBox="0 0 280.067 280.067">
+         <g>
+            <path d="M149.823,257.142c-31.398,30.698-81.882,30.576-113.105-0.429
+		c-31.214-30.987-31.337-81.129-0.42-112.308l-0.026-0.018L149.841,31.615l14.203-14.098c23.522-23.356,61.65-23.356,85.172,0
+		s23.522,61.221,0,84.586l-125.19,123.02l-0.044-0.035c-15.428,14.771-40.018,14.666-55.262-0.394
+		c-15.244-15.069-15.34-39.361-0.394-54.588l-0.044-0.053l13.94-13.756l69.701-68.843l13.931,13.774l-83.632,82.599
+		c-7.701,7.596-7.701,19.926,0,27.53s20.188,7.604,27.88,0L235.02,87.987l-0.035-0.026l0.473-0.403
+		c15.682-15.568,15.682-40.823,0-56.39s-41.094-15.568-56.776,0l-0.42,0.473l-0.026-0.018l-14.194,14.089L50.466,158.485
+		c-23.522,23.356-23.522,61.221,0,84.577s61.659,23.356,85.163,0l99.375-98.675l14.194-14.089l14.194,14.089l-14.194,14.098
+		l-99.357,98.675C149.841,257.159,149.823,257.142,149.823,257.142z"/>
+         </g>
+      </symbol>
+   </svg>
 
 
    <header class="header">
@@ -54,7 +67,7 @@
       <div class="container">
 
          <div class="header__items">
-            <a class="header__logo" href="#">
+            <a class="header__logo" href="index.html">
                <div class="header__logo-big">M</div>
                <div class="header__logo-small" translate="no">by</div>
             </a>
@@ -67,7 +80,7 @@
                   <span class="hover-item1" translate="no">CodePen</span>
                   <span class="hover-item2" translate="no">CodePen</span>
                </a>
-               <a class="header__nav-item" href="contacts.html">
+               <a class="header__nav-item" href="#">
                   <span class="hover-item1">Контакты</span>
                   <span class="hover-item2">Контакты</span>
                </a>
@@ -82,8 +95,8 @@
    <div class="mobile-menu">
       <nav class="mobile-menu__nav">
          <a class="mobile-menu__nav-item" href="#">Портфолио</a>
-         <a class="mobile-menu__nav-item" href="#">CodePen</a>
-         <a class="mobile-menu__nav-item" href="contacts.html">Контакты</a>
+         <a class="mobile-menu__nav-item" href="#">Sandbox</a>
+         <a class="mobile-menu__nav-item" href="#">Контакты</a>
       </nav>
       <div class="mobile-menu__contacts">
          <div class="mobile-menu__social">
@@ -112,257 +125,63 @@
 
    <div class="page">
 
-      <section class="main">
+      <section class="contacts-page">
+         
+         <div class="container">
 
-         <div class="container">
-   
-            <div class="main__items">
-               <h1 class="main__title">Меркушин Артём</h1>
-               <span class="main__subtitle">Фронтенд-разработчик</span>
-               <a class="show-more" href="https://jacekjeznach.com/">
-                  <div class="show-more__text" translate="no">
-                     show
-                     more
-                  </div>
-               </a> 
-            </div>
-   
+            <h2 class="contacts-page__title">
+               <p translate="no">Hi!</p>
+               <p>Рад вас видеть на этой странице. Заполните форму и я свяжусь с вами.</p>
+            </h2>
+
+            <form class="form" id="form" action="#">
+               <div class="form__item">
+                  <label for="name">Ваше имя:</label>
+                  <input class="_req" id="name" type="text">
+               </div>
+               <div class="form__item">
+                  <label for="phone">Ваш телефон:</label>
+                  <input class="form__number" id="phone" name="phone" type="text" placeholder="+38(0__)___-__-__">
+               </div>
+               <div class="form__item">
+                  <label for="mail">Ваша почта:</label>
+                  <input class="_req _email" id="mail" type="text">
+               </div>
+               <div class="form__item">
+                  <label for="town">Ваш город:</label>
+                  <input id="town" type="text">
+               </div>
+               <div class="form__item">
+                  <label for="massage">Ваше сообщение:</label>
+                  <textarea class="massage" id="massage"></textarea>
+               </div>
+               <div class="form__item input">
+                  <label class="input-img" for="fileinput">
+                     <svg class="icon">
+                        <use xlink:href="#attachment"></use>
+                     </svg>
+                  </label>
+                  <input class="fileinput" id="fileinput" type="file" >
+                  <span>
+                     <span id="filename">файл не выбран</span>
+                  </span>
+               </div>
+               <div class="form__btn">
+                  <button class="show-more" href="https://jacekjeznach.com/">
+                     <svg class="icon">
+                        <use xlink:href="#email"></use>
+                     </svg>
+                  </button> 
+               </div>
+            </form>
+
          </div>
-   
-      </section>
-   
-      <section class="text-banner">
-   
-         <div class="text-anim">
-            <div>
-               Professionally<span></span>Qualitatively<span></span>Responsibly<span></span>Professionally<span></span>Qualitatively<span></span>Responsibly<span></span>
-            </div>
-            <div>
-               Qualitatively<span></span>Responsibly<span></span>Professionally<span></span>Qualitatively<span></span>Responsibly<span></span>Professionally<span></span>
-            </div>
-            <div>
-               Responsibly<span></span>Professionally<span></span>Qualitatively<span></span>Responsibly<span></span>Professionally<span></span>Qualitatively<span></span>
-            </div>
-         </div>
-   
-      </section>
-   
-      <section class="services">
-   
-         <div class="container">
-   
-            <h2 class="title">Услуги</h2>
-   
-            <div class="services__items">
-               <div class="services__item">
-                  <img src="images/услуги.jpg" alt="img">
-               </div>
-               <div class="services__item">
-                  <p class="services__item-text">
-                     Качественная верстка сайтов разной сложности.
-                  </p>
-                  <p class="services__item-text">
-                     Разработка пользовательского интерфейса(User Interface).
-                  </p>
-                  <p class="services__item-text">
-                     Создание публичной части веб-приложения, с которой непосредственно контактирует пользователь, и функционал который обычно выполняется на стороне клиента.
-                  </p>
-                  <p class="services__item-text">Доработка сайтов.</p>
-               </div>
-            </div>
-   
-         </div>
-   
-      </section>
-   
-      <section class="main-portfolio">
-   
-         <div class="container">
-   
-             <h2 class="title">Последние работы</h2>
-   
-            <div class="main-portfolio__items">
-               <div class="main-portfolio__item">
-                  <div class="main-portfolio__item-img">
-                     <img src="images/portfilio.jpg" alt="img">
-                     <a class="show-more" href="https://jacekjeznach.com/">
-                        <div class="show-more__text" translate="no">
-                           show
-                           more
-                        </div>
-                     </a>
-                  </div>
-                  <a class="main-portfolio__item-title" href="#">Название сайта</a>
-               </div>
-               <div class="main-portfolio__item">
-                  <div class="main-portfolio__item-img">
-                     <img src="images/portfilio.jpg" alt="img">
-                     <a class="show-more" href="https://jacekjeznach.com/">
-                        <div class="show-more__text" translate="no">
-                           show
-                           more
-                        </div>
-                     </a>
-                  </div>
-                  <a class="main-portfolio__item-title" href="#">Название сайта</a>
-               </div>
-               <div class="main-portfolio__item">
-                  <div class="main-portfolio__item-img">
-                     <img src="images/portfilio.jpg" alt="img">
-                     <a class="show-more" href="https://jacekjeznach.com/">
-                        <div class="show-more__text" translate="no">
-                           show
-                           more
-                        </div>
-                     </a>
-                  </div>
-                  <a class="main-portfolio__item-title" href="#">Название сайта</a>
-               </div>
-               <div class="main-portfolio__item">
-                  <div class="main-portfolio__item-img">
-                     <img src="images/portfilio.jpg" alt="img">
-                     <a class="show-more" href="https://jacekjeznach.com/">
-                        <div class="show-more__text" translate="no">
-                           show
-                           more
-                        </div>
-                     </a>
-                  </div>
-                  <a class="main-portfolio__item-title" href="#">Название сайта</a>
-               </div>
-            </div>
-   
-         </div>
-   
-      </section>
-   
-      <section class="skills">
-   
-         <div class="container">
-   
-            <h2 class="title" translate="no">My skills</h2>
-   
-   
-            <div class="skills__items">
-               <div class="skills__item">
-                  <span class="content"></span>
-               </div>
-               <div class="skills__item">
-                  <p>
-                     HTML, CSS, SCSS, JavaScript, jQuery, Figma, Photoshop - достаточно навыков для верстки и создания сайтов;
-                  </p>
-                  <p>
-                     Опыт работы с Gulp и Git;
-                  </p>
-                  <p>
-                     Адаптивная верстка;
-                  </p>
-                  <p>
-                     Pixel perfect +-10%;
-                  </p>
-               </div>
-   
-            </div>
-   
-         </div>
-   
-      </section>
-   
-      <section class="experiments">
-   
-         <div class="container">
-   
-            <h2 class="title" translate="no">
-               CodePen</h2>
-   
-            <div class="experiments__items">
-               <div class="experiments__item">
-                  <div class="experiments__item-content">
-                     <div class="timer"></div>
-                  </div>
-                  <a class="experiments__item-title" href="#">
-                     <span>
-                        Таймер
-                        <svg class="icon">
-                           <use xlink:href="#codepen"></use>
-                        </svg>
-                     </span>
-                  </a>
-               </div>
-               <div class="experiments__item">
-                  <div class="experiments__item-content">
-                     <div class="loading">
-                        <div class="loading1"></div>
-                        <div class="loading2"></div>
-                        <div class="loading3"></div>
-                     </div>
-                  </div>
-                  <a class="experiments__item-title" href="#">
-                     <span>
-                        Значок загрузки
-                        <svg class="icon">
-                           <use xlink:href="#codepen"></use>
-                        </svg>
-                     </span>
-                  </a>
-               </div>
-               <div class="experiments__item">
-                  <div class="experiments__item-content rain">
-                     
-                  </div>
-                  <a class="experiments__item-title" href="#">
-                     <span>
-                        Красочный дождь
-                        <svg class="icon">
-                           <use xlink:href="#codepen"></use>
-                        </svg>
-                     </span>
-                  </a>
-               </div>
-               <div class="experiments__item">
-                  <div class="experiments__item-content">
-                     <div class="face"></div>
-                     <div class="text"></div>
-                  </div>
-                  <a class="experiments__item-title" href="#">
-                     <span>
-                        портрет из слов
-                        <svg class="icon">
-                           <use xlink:href="#codepen"></use>
-                        </svg>
-                     </span>
-                  </a>
-               </div>
-            </div>
-   
-         </div>
-   
-      </section>
-   
-      <section class="contacts">
-   
-         <div class="text-anim">
-            <div>
-               Contact me<span></span>Let's talk<span></span>Contact me<span></span>Let's talk<span></span>Contact me<span></span>Let's talk<span></span>
-            </div>
-            <div>
-               Contact me<span></span>Let's talk<span></span>Contact me<span></span>Let's talk<span></span>Contact me<span></span>Let's talk<span></span>
-            </div>
-         </div>
-   
-         <a class="show-more" href="https://jacekjeznach.com/">
-            <div class="show-more__text" translate="no">
-               <svg class="icon">
-                  <use xlink:href="#email"></use>
-               </svg>
-            </div>
-         </a>
-   
+         
+
       </section>
 
    </div>
 
-   
 
    <footer class="footer">
 
@@ -395,12 +214,12 @@
       </div>
 
    </footer>
-   
 
    <script src="js/background.js"></script>
+   <script src="https://unpkg.com/imask?_v=20220212190204"></script>
+   <script src="js/maskTell.js"></script>
    <script src="js/js.js"></script>
-   <script src="https://cdn.jsdelivr.net/npm/TagCloud@2.2.0/dist/TagCloud.min.js"></script>
-   <script src="js/sphere.js"></script>
-   <script src="js/experiments.js"></script>
+   <script src="js/file.js"></script>
+   <script src="js/form.js"></script>
 </body>
 </html>
