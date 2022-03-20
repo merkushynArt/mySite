@@ -1073,6 +1073,25 @@ section {
           justify-content: center;
 }
 
+.codepen-page .title {
+  text-align: center;
+  padding-top: 100px;
+}
+
+.codepen-page__item {
+  margin-bottom: 30px;
+}
+
+.codepen-page__item-title {
+  font-size: 24px;
+  line-height: 30px;
+  margin-bottom: 10px;
+}
+
+.codepen-page__item .cp_embed_iframe {
+  height: 400px;
+}
+
 /*===========================================================================================================================*/
 @media (max-width: 1210px) {
   .container {
@@ -1303,6 +1322,16 @@ section {
   }
   .contacts-page .form__item {
     width: 100% !important;
+  }
+  .codepen-page .title {
+    padding-top: 80px;
+  }
+  .codepen-page__item-title {
+    font-size: 20px;
+    line-height: 26px;
+  }
+  .codepen-page__item .cp_embed_iframe {
+    height: 300px;
   }
 }
 
