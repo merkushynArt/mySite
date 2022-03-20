@@ -5,8 +5,8 @@
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <link rel="preconnect" href="https://fonts.googleapis.com">
-   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
    <link rel="stylesheet" href="css/style.css">
    <title>byMerkushyn</title>
 </head>
@@ -61,7 +61,6 @@
       </symbol>
    </svg>
 
-
    <header class="header">
 
       <div class="container">
@@ -72,7 +71,7 @@
                <div class="header__logo-small" translate="no">by</div>
             </a>
             <nav class="header__nav">
-               <a class="header__nav-item" href="portfolio.html">
+               <a class="header__nav-item" href="#">
                   <span class="hover-item1">Портфолио</span>
                   <span class="hover-item2">Портфолио</span>
                </a>
@@ -80,7 +79,7 @@
                   <span class="hover-item1" translate="no">CodePen</span>
                   <span class="hover-item2" translate="no">CodePen</span>
                </a>
-               <a class="header__nav-item" href="#">
+               <a class="header__nav-item" href="contacts.html">
                   <span class="hover-item1">Контакты</span>
                   <span class="hover-item2">Контакты</span>
                </a>
@@ -96,7 +95,7 @@
       <nav class="mobile-menu__nav">
          <a class="mobile-menu__nav-item" href="#">Портфолио</a>
          <a class="mobile-menu__nav-item" href="codepen.html">CodePen</a>
-         <a class="mobile-menu__nav-item" href="#">Контакты</a>
+         <a class="mobile-menu__nav-item" href="contacts.html">Контакты</a>
       </nav>
       <div class="mobile-menu__contacts">
          <div class="mobile-menu__social">
@@ -125,62 +124,69 @@
 
    <div class="page">
 
-      <section class="contacts-page">
+      <section class="portfolio-page">
          
          <div class="container">
 
-            <h2 class="contacts-page__title">
-               <p translate="no">Hi!</p>
-               <p>Рад вас видеть на этой странице. Заполните форму и я свяжусь с вами.</p>
-            </h2>
+            <h2 class="title">Ваши возможности моя страсть</h2>
 
-            <form class="form" id="form" action="#">
-               <div class="form__item">
-                  <label for="name">Ваше имя:</label>
-                  <input class="_req" id="name" type="text">
+            <div class="portfolio-page__items">
+               <div class="portfolio-page__item">
+                  <div class="portfolio-page__item-img">
+                     <img src="images/portfilio.jpg" alt="img">
+                     <a class="show-more" href="https://jacekjeznach.com/">
+                        <div class="show-more__text" translate="no">
+                           show
+                           more
+                        </div>
+                     </a>
+                  </div>
+                  <a class="main-portfolio__item-title" href="#">Название сайта</a>
                </div>
-               <div class="form__item">
-                  <label for="phone">Ваш телефон:</label>
-                  <input class="form__number" id="phone" name="phone" type="text" placeholder="+38(0__)___-__-__">
+               <div class="portfolio-page__item">
+                  <div class="portfolio-page__item-img">
+                     <img src="images/portfilio.jpg" alt="img">
+                     <a class="show-more" href="https://jacekjeznach.com/">
+                        <div class="show-more__text" translate="no">
+                           show
+                           more
+                        </div>
+                     </a>
+                  </div>
+                  <a class="main-portfolio__item-title" href="#">Название сайта</a>
                </div>
-               <div class="form__item">
-                  <label for="mail">Ваша почта:</label>
-                  <input class="_req _email" id="mail" type="text">
+               <div class="portfolio-page__item">
+                  <div class="portfolio-page__item-img">
+                     <img src="images/portfilio.jpg" alt="img">
+                     <a class="show-more" href="https://jacekjeznach.com/">
+                        <div class="show-more__text" translate="no">
+                           show
+                           more
+                        </div>
+                     </a>
+                  </div>
+                  <a class="main-portfolio__item-title" href="#">Название сайта</a>
                </div>
-               <div class="form__item">
-                  <label for="town">Ваш город:</label>
-                  <input id="town" type="text">
+               <div class="portfolio-page__item">
+                  <div class="portfolio-page__item-img">
+                     <img src="images/portfilio.jpg" alt="img">
+                     <a class="show-more" href="https://jacekjeznach.com/">
+                        <div class="show-more__text" translate="no">
+                           show
+                           more
+                        </div>
+                     </a>
+                  </div>
+                  <a class="main-portfolio__item-title" href="#">Название сайта</a>
                </div>
-               <div class="form__item">
-                  <label for="massage">Ваше сообщение:</label>
-                  <textarea class="massage" id="massage"></textarea>
-               </div>
-               <div class="form__item input">
-                  <label class="input-img" for="fileinput">
-                     <svg class="icon">
-                        <use xlink:href="#attachment"></use>
-                     </svg>
-                  </label>
-                  <input class="fileinput" id="fileinput" type="file" >
-                  <span>
-                     <span id="filename">файл не выбран</span>
-                  </span>
-               </div>
-               <div class="form__btn">
-                  <button class="show-more" href="https://jacekjeznach.com/">
-                     <svg class="icon">
-                        <use xlink:href="#email"></use>
-                     </svg>
-                  </button> 
-               </div>
-            </form>
+            </div>
 
          </div>
-         
 
       </section>
 
    </div>
+
 
 
    <footer class="footer">
@@ -216,10 +222,7 @@
    </footer>
 
    <script src="js/background.js"></script>
-   <script src="https://unpkg.com/imask?_v=20220212190204"></script>
-   <script src="js/maskTell.js"></script>
+   <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
    <script src="js/js.js"></script>
-   <script src="js/file.js"></script>
-   <script src="js/form.js"></script>
 </body>
 </html>
