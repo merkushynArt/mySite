@@ -54,7 +54,6 @@ section {
    z-index: 1;
 
    &:hover {
-      
       &::before {
          width: 120%;
          height: 120%;
@@ -434,7 +433,6 @@ section {
             transform: translate(-50%, -50%);
             width: 150px;
             height: 150px;
-            background: rgba(0, 0, 0, 0.85);
             
             &__text {
                font-size: 30px;
@@ -614,11 +612,11 @@ section {
          .face {
             width: 100%;
             height: 100%;
-            background: url('../images/obama.jpg')center/auto 100% no-repeat;
+            background: url('../images/obama.jpg') center center/auto 100% no-repeat;
          }
 
          .text {
-            background: url('../images/text.jpg')center/auto 100% no-repeat;
+            background: url('../images/text.jpg') center center/auto 100% no-repeat;
             mix-blend-mode: multiply;
             animation: text 14s infinite;
             opacity: .8;
@@ -984,7 +982,6 @@ section {
             transform: translate(-50%, -50%);
             width: 150px;
             height: 150px;
-            background: rgba(0, 0, 0, 0.85);
             
             &__text {
                font-size: 30px;
