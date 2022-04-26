@@ -96,6 +96,39 @@ section {
   font-weight: bold;
 }
 
+.link-hover {
+  display: inline-block;
+  position: relative;
+  overflow: hidden !important;
+}
+
+.link-hover:hover .link-hover__item1 {
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%);
+}
+
+.link-hover:hover .link-hover__item2 {
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.link-hover__item1 {
+  color: #969696;
+  -webkit-transform: translateY(0%);
+          transform: translateY(0%);
+  -webkit-transition: all .2s linear;
+  transition: all .2s linear;
+}
+
+.link-hover__item2 {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  -webkit-transition: all .2s linear;
+  transition: all .2s linear;
+}
+
 /*===========================================================================================================================*/
 #canv {
   position: fixed;
@@ -469,8 +502,17 @@ section {
 }
 
 /*==========================================================================================================================*/
+.main-portfolio.padding-top .title {
+  padding-top: 100px;
+}
+
 .main-portfolio .title {
   text-align: center;
+}
+
+.main-portfolio .link-hover {
+  font-size: 30px;
+  line-height: 30px;
 }
 
 .main-portfolio__items {
@@ -484,13 +526,19 @@ section {
   grid-row-gap: 40px;
 }
 
+.main-portfolio__item {
+  max-height: 400px;
+}
+
 .main-portfolio__item-img {
   position: relative;
+  height: 80%;
+  margin-bottom: 10px;
 }
 
 .main-portfolio__item-img img {
   width: 100%;
-  height: auto;
+  height: 100%;
   max-height: 350px;
   -o-object-fit: cover;
      object-fit: cover;
@@ -504,6 +552,10 @@ section {
           transform: translate(-50%, -50%);
   width: 150px;
   height: 150px;
+}
+
+.main-portfolio__item-img .show-more:hover::before {
+  border: 3px solid #fff;
 }
 
 .main-portfolio__item-img .show-more__text {
@@ -1263,9 +1315,15 @@ section {
   #canvas {
     display: none;
   }
+  .main-portfolio__item-img {
+    margin-bottom: 5px;
+  }
   .main-portfolio__item-title {
     font-size: 20px;
     line-height: 30px;
+  }
+  .main-portfolio .link-hover {
+    font-size: 24px;
   }
   .footer__item-contacts {
     display: block;
@@ -1419,7 +1477,7 @@ section {
   .footer__item-contacts {
     text-align: center;
   }
-  .portfolio-page .title {
+  .main-portfolio.padding-top .title {
     padding-top: 80px;
   }
 }
@@ -1475,7 +1533,7 @@ section {
     font-size: 33px;
     line-height: 33px;
   }
-  .main-portfolio__item-title {
+  .main-portfolio .link-hover {
     font-size: 20px;
   }
   /*PORTFOLIO-PAGE======================================================================================*/

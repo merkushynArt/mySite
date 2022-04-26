@@ -82,6 +82,36 @@ section {
    }
 }
 
+.link-hover {
+   display: inline-block;
+   position: relative;
+   overflow: hidden !important;
+
+   &:hover {
+      .link-hover__item1 {
+         transform: translateY(-100%);
+      }
+
+      .link-hover__item2 {
+         top: 50%;
+         transform: translateY(-50%);
+      }
+   }
+
+   &__item1 {
+      color: #969696;
+      transform: translateY(0%);
+      transition: all .2s linear;
+   }
+
+   &__item2 {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      transition: all .2s linear;
+   }
+}
+
 /*===========================================================================================================================*/
 #canv{
    position: fixed;
@@ -403,8 +433,21 @@ section {
 
 /*==========================================================================================================================*/
 .main-portfolio {
+
+   &.padding-top {
+      .title {
+         padding-top: 100px;
+      }
+   }
+
    .title {
+
       text-align: center;
+   }
+
+   .link-hover {
+      font-size: 30px;
+      line-height: 30px;
    }
 
    &__items {
@@ -416,12 +459,16 @@ section {
    }
 
    &__item {
+      max-height: 400px;
 
       &-img{
          position: relative;
+         height: 80%;
+         margin-bottom: 10px;
+
          img {
             width: 100%;
-            height: auto;
+            height: 100%;
             max-height: 350px;
             object-fit: cover;
          }
@@ -433,6 +480,13 @@ section {
             transform: translate(-50%, -50%);
             width: 150px;
             height: 150px;
+
+            &:hover {
+               &::before {
+                  border: 3px solid #fff;
+               }
+            }
+            
             
             &__text {
                font-size: 30px;
@@ -622,9 +676,7 @@ section {
             opacity: .8;
          }
 
-         @keyframes text {
-
-            
+         @keyframes text {           
             0%,
             100% {
                background-position: 0 0;
@@ -1172,10 +1224,18 @@ section {
       display: none;
    }
 
-   .main-portfolio{
+   .main-portfolio {
+      &__item-img {
+         margin-bottom: 5px;
+      }
+
       &__item-title {
          font-size: 20px;
          line-height: 30px;
+      }
+
+      .link-hover {
+         font-size: 24px;
       }
    }
    
@@ -1401,7 +1461,7 @@ section {
    }
 
    //PORTFOLIO-PAGE =======================================================================================================
-   .portfolio-page {
+   .main-portfolio.padding-top {
       .title {
          padding-top: 80px;
       }
@@ -1486,7 +1546,7 @@ section {
    }
 
    .main-portfolio {
-      &__item-title {
+      .link-hover {
          font-size: 20px;
       }
    }
