@@ -1,6 +1,8 @@
 import { useEffect } from 'react';
 import './App.css';
 import { Preloader } from './components/Preloader';
+import { Header } from './components/Header';
+import { Outlet } from 'react-router-dom';
 
 function App() {
    useEffect(() => {
@@ -13,7 +15,8 @@ function App() {
    return (
       <div className="App">
          <Preloader/>
-         <h1>hello</h1>
+         <Header/>
+         <Outlet/>
       </div>
    );
 }

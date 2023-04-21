@@ -52,3 +52,75 @@ body.loaded .preload{
       background-position: 0%;
    }
 }
+
+.container {
+   max-width: 1024px;
+   width: 100%;
+   margin: 0 auto;
+   padding: 0 5px;
+}
+
+/*==============================================================================*\
+#HEADER
+\*==============================================================================*/
+.header {
+   font-size: 18px;
+   font-weight: 500;
+   padding: 5px 0 10px;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+}
+
+.logo {
+   font-size: 30px;
+   display: flex;
+   align-items: center;
+   color: #fff;
+}
+
+.header__list {
+   display: flex;
+   justify-content: right;
+   gap: 20px;
+}
+
+.header__list-item {
+   text-transform: uppercase;
+   color: #a1a1a1;
+   text-decoration: none;
+   overflow: hidden;
+   height: 18px;
+   transition: .2s linear;
+}
+
+.header__list-item:hover .header__list-item--1{
+   transform: translateY(-100%);
+   transition: .2s linear;
+}
+
+.header__list-item:hover .header__list-item--2{
+   transform: translateY(-100%);
+   transition: .2s linear;
+}
+
+.header__list-item.active .header__list-item--1{
+   color: #fff;
+   transition: .2s linear;
+}
+
+.header__list-item--1 {
+   display: block;
+   color: #a1a1a1;
+   transition: .2s linear;
+}
+
+.header__list-item--2 {
+   display: block;
+   color: #fff;
+   transition: .2s linear;
+}
+
+/*==============================================================================*\
+#
+\*==============================================================================*/
