@@ -162,6 +162,43 @@ body.loaded .preload{
 }
 
 /*==============================================================================*\
+#main
+\*==============================================================================*/
+.hero {
+   overflow: hidden;
+}
+
+.hero__title-container {
+   display: flex;
+   overflow: hidden;
+}
+
+.hero__title {
+   text-transform: uppercase;
+   font-size: 7vh;
+   margin-right: 50px;
+   white-space: nowrap;
+   animation: moveLeft 10s linear infinite;
+}
+
+.hero__title-second {
+   font-size: 50px;
+   display: none;
+}
+
+@keyframes moveLeft {
+   0% {
+      transform: translateX(0%);
+   }
+   100% {
+      transform: translateX(-100%);
+   }
+}
+.hero__promo video {
+   width: 100%;
+}
+
+/*==============================================================================*\
 #max-width: 600px
 \*==============================================================================*/
 @media (max-width: 600px) {
@@ -172,8 +209,10 @@ body.loaded .preload{
       padding-right: 20px;
       border-right: 2px solid #fff;
       position: fixed;
+      top: 0;
       left: -52%;
       transition: .3s linear;
+      z-index: 10;
    }
 
    .header.active {
@@ -190,9 +229,9 @@ body.loaded .preload{
 
    .header__list-item {
       display: block;
-      font-size: 26px;
-      height: 26px;
-      margin: 20px 0;
+      font-size: 20px;
+      height: 20px;
+      margin: 16px 0;
    }
 
    .header__list-item--1, 
@@ -205,5 +244,26 @@ body.loaded .preload{
       position: fixed;
       top: 10px;
       right: 5px;
+   }
+
+   .hero__title-container {
+      margin-top: 36px;
+   }
+
+   .hero__title {
+      display: none;
+   }
+
+   .hero__title-second {
+      display: block;
+   }
+}
+
+/*==============================================================================*\
+#max-width: 600px
+\*==============================================================================*/
+@media (max-width: 500px) {
+   .hero__title-second {
+      font-size: 34px;
    }
 }
