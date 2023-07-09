@@ -57,7 +57,101 @@ section {
    max-width: 1024px;
    width: 100%;
    margin: 0 auto;
-   padding: 0 5px;
+   padding: 100px 5px;
+}
+
+.title {
+   font-size: 56px;
+   text-transform: uppercase;
+   color: transparent;
+   -webkit-text-stroke: 1px #fff;
+   -webkit-text-fill-color: transparent;
+}
+
+.tr {
+   text-align: right;
+}
+
+.button-anim {
+   position: relative;
+}
+
+.button-container {
+   display: flex;
+   overflow-x: hidden;
+}
+
+.button__link {
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   background: #000;
+   width: 150px;
+   height: 150px;
+   border: 2px solid #fff;
+   border-radius: 100px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   text-align: center;
+   text-decoration: none;
+   font-size: 30px;
+   font-weight: 700;
+   text-transform: uppercase;
+   color: #fff;
+}
+
+.button__link:hover .button__link-word::before  {
+   width: 150px;
+   height: 150px;
+}
+
+.button__link:hover .button__link-word {
+   color: #000;
+}
+
+.button__link-word {
+   position: relative;
+   z-index: 10;
+   transition: all .8s linear;
+   
+}
+
+.button__link-word::before {
+   content: '';
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   width: 0px;
+   height: 0px;
+   background: #fff;
+   border-radius: 100px;
+   z-index: -1;
+   transition: all .1s linear;
+}
+
+.button__title {
+   text-transform: uppercase;
+   font-size: 7vh;
+   margin-right: 50px;
+   white-space: nowrap;
+   animation: moveLeft 10s linear infinite;
+}
+
+.button__title-second {
+   font-size: 50px;
+   display: none;
+}
+
+@keyframes moveLeft {
+   0% {
+      transform: translateX(0%);
+   }
+   100% {
+      transform: translateX(-100%);
+   }
 }
 
 /*==============================================================================*\
@@ -166,6 +260,10 @@ section {
 \*==============================================================================*/
 .hero {
    overflow: hidden;
+   max-width: 1024px;
+   width: 100%;
+   margin: 0 auto;
+   padding: 0 5px;
 }
 
 .hero__title-container {
@@ -204,6 +302,23 @@ section {
    font-size: 30px;
    font-weight: 700;
 }
+/*==============================================================================*/
+.grid-container {
+   display: grid;
+   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Автоматическое заполнение столбцов с минимальной шириной 200px */
+   grid-auto-rows: 300px; /* Высота каждой строки равна 200px */
+   grid-gap: 30px; /* Промежуток между блоками */
+ }
+ 
+ .grid-item {
+   background-color: #f2f2f2;
+   padding: 20px;
+ }
+ 
+ .grid-item:nth-child(3n+1) {
+   grid-column: span 2; /* Занимает 2 столбца */
+   grid-row: span 2; /* Занимает 2 строки */
+ }
 
 /*==============================================================================*\
 #max-width: 600px
