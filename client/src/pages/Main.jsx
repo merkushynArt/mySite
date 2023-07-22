@@ -1,6 +1,7 @@
 import React from 'react';
 import { Title } from '../components/Title.jsx';
 import { Button } from '../components/Button.jsx';
+import { PortfolioBlock } from '../components/PortfolioBlock.jsx';
 
 
 const words1 = [
@@ -14,11 +15,8 @@ const wordsPortfolio = [
    'Gallery of my developments and code solutions',
    'Gallery of my developments and code solutions',
    'Gallery of my developments and code solutions'
-]
-/*
-   'Overview of my code achievements and implementations',
-   'Portfolio showcasing my skills and implementation of my work',
-*/
+];
+
 
 export const Main = () => {
    return (
@@ -40,18 +38,42 @@ export const Main = () => {
 
          <section className='main-portfolio'>
             <h3 className='title tr'>Recent Works</h3>
-            <div class="grid-container">
-               <div class="grid-item"></div>
-               <div class="grid-item"></div>
-               <div class="grid-item"></div>
-               <div class="grid-item"></div>
-               <div class="grid-item"></div>
-               <div class="grid-item"></div>
+            <div className='main-portfolio__container'>
+               <PortfolioBlock 
+                  imgUrl={'https://advanced.team//assets/components/phpthumbof/cache/00ae9372e92edde76fd344b72941ad6e.708dfb4c78bcc48411d04e8173ee5f94.jpg'} 
+                  portfolioTitle={'Depositphotos. Evolutione.'}
+                  portfolioLink={'/portfolio'}
+               />
+               <PortfolioBlock 
+                  imgUrl={'https://advanced.team//assets/components/phpthumbof/cache/00ae9372e92edde76fd344b72941ad6e.708dfb4c78bcc48411d04e8173ee5f94.jpg'} 
+                  portfolioTitle={'Depositphotos. Evolutione.'}
+                  portfolioLink={'/portfolio'}
+               />
+               <PortfolioBlock 
+                  imgUrl={'https://advanced.team//assets/components/phpthumbof/cache/00ae9372e92edde76fd344b72941ad6e.708dfb4c78bcc48411d04e8173ee5f94.jpg'} 
+                  portfolioTitle={'Depositphotos. Evolutione.'}
+                  portfolioLink={'/portfolio'}
+               />
+               <PortfolioBlock 
+                  imgUrl={'https://advanced.team//assets/components/phpthumbof/cache/00ae9372e92edde76fd344b72941ad6e.708dfb4c78bcc48411d04e8173ee5f94.jpg'} 
+                  portfolioTitle={'Depositphotos. Evolutione.'}
+                  portfolioLink={'/portfolio'}
+               />
+               <PortfolioBlock 
+                  imgUrl={'https://advanced.team//assets/components/phpthumbof/cache/00ae9372e92edde76fd344b72941ad6e.708dfb4c78bcc48411d04e8173ee5f94.jpg'} 
+                  portfolioTitle={'Depositphotos. Evolutione.'}
+                  portfolioLink={'/portfolio'}
+               />
+               <PortfolioBlock 
+                  imgUrl={'https://advanced.team//assets/components/phpthumbof/cache/00ae9372e92edde76fd344b72941ad6e.708dfb4c78bcc48411d04e8173ee5f94.jpg'} 
+                  portfolioTitle={'Depositphotos. Evolutione.'}
+                  portfolioLink={'/portfolio'}
+               />
             </div>
          </section>
-         <Button words={wordsPortfolio}/>
+         <Button words={wordsPortfolio} linkTo={'portfolio'}/>
 
          <section></section>
       </div>
    );
-}
+};

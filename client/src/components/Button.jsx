@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 
-export const Button = ({ words }) => {
+export const Button = ({ words, linkTo }) => {
    const [currentWordIndex, setCurrentWordIndex] = useState(0);
    const currentWord = words[currentWordIndex];
 
@@ -22,7 +22,7 @@ export const Button = ({ words }) => {
             ))}
             <h3 className='button__title-second'>{currentWord}</h3>
          </div>
-         <Link className="button__link" to={'/'}>
+         <Link className="button__link" to={linkTo}>
             <div className="button__link-word">
                Show <br/>more
             </div>
