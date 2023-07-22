@@ -2,6 +2,14 @@ import React from 'react';
 import { Title } from '../components/Title.jsx';
 import { Button } from '../components/Button.jsx';
 import { PortfolioBlock } from '../components/PortfolioBlock.jsx';
+import { FaCss3, FaHtml5 } from "react-icons/fa6";
+import { IoLogoJavascript, IoLogoReact } from "react-icons/io5";
+import { FaNode } from "react-icons/fa";
+import { BiLogoTypescript, BiLogoMongodb } from "react-icons/bi";
+import { TbApi } from "react-icons/tb";
+import { SiExpress } from "react-icons/si";
+
+
 
 
 const words1 = [
@@ -72,6 +80,66 @@ export const Main = () => {
             </div>
          </section>
          <Button words={wordsPortfolio} linkTo={'portfolio'}/>
+
+         <section className='main-skills'>
+            <h3 className='title'>My skills</h3>
+            <div className="main-skills__container">
+               <div className="main-skills__block">
+                  <div className='main-skills__block-img'>
+                     <FaHtml5/>
+                  </div>
+                  <h5 className='main-skills__block-title'>HTML</h5>
+               </div>
+               <div className="main-skills__block">
+                  <div className='main-skills__block-img'>
+                     <FaCss3/>
+                  </div>
+                  <h5 className='main-skills__block-title'>CSS</h5>
+               </div>
+               <div className="main-skills__block">
+                  <div className='main-skills__block-img'>
+                     <IoLogoJavascript/>
+                  </div>
+                  <h5 className='main-skills__block-title'>JavaScript</h5>
+               </div>
+               <div className="main-skills__block">
+                  <div className='main-skills__block-img'>
+                     <IoLogoReact/>
+                  </div>
+                  <h5 className='main-skills__block-title'>React</h5>
+               </div>
+               <div className="main-skills__block">
+                  <div className='main-skills__block-img'>
+                     <FaNode/>
+                  </div>
+                  <h5 className='main-skills__block-title'>Node</h5>
+               </div>
+               <div className="main-skills__block">
+                  <div className='main-skills__block-img'>
+                     <BiLogoTypescript/>
+                  </div>
+                  <h5 className='main-skills__block-title'>TypeScript</h5>
+               </div>
+               <div className="main-skills__block">
+                  <div className='main-skills__block-img'>
+                     <SiExpress/>
+                  </div>
+                  <h5 className='main-skills__block-title'>Express</h5>
+               </div>
+               <div className="main-skills__block">
+                  <div className='main-skills__block-img'>
+                     <BiLogoMongodb/>
+                  </div>
+                  <h5 className='main-skills__block-title'>Mongodb</h5>
+               </div>
+               <div className="main-skills__block">
+                  <div className='main-skills__block-img'>
+                     <TbApi/>
+                  </div>
+                  <h5 className='main-skills__block-title'>REST API</h5>
+               </div>
+            </div>
+         </section>
 
          <section></section>
       </div>
