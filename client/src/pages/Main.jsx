@@ -83,6 +83,9 @@ export const Main = () => {
 
          <section className='main-skills'>
             <h3 className='title'>My skills</h3>
+            <p>
+               Development in programming is an endless journey for me, driven by diligence and a passion for learning. Every day, I immerse myself in self-education, exploring new technologies and implementing them in practice. Aspiring to perfection and becoming the best programmer pushes me to seek new challenges and believe that there is always an opportunity for new knowledge and achievements in this captivating world of programming.
+            </p>
             <div className="main-skills__container">
                <div className="main-skills__block">
                   <div className='main-skills__block-img'>
