@@ -2,7 +2,7 @@ import { createBrowserRouter } from "react-router-dom";
 import App from "./App";
 import { Main } from './pages/Main'
 import { Portfolio } from './pages/Portfolio';
-import { AboutMe } from "./pages/AboutMe";
+import { Blog } from "./pages/Blog";
 import { Contacts } from "./pages/Contacts";
 
 export const router = createBrowserRouter([
@@ -15,8 +15,8 @@ export const router = createBrowserRouter([
             element: <Main/>
          },
          {
-            path: 'aboutme',
-            element: <AboutMe/>,
+            path: 'blog',
+            element: <Blog/>,
          },
          {
             path: 'portfolio',

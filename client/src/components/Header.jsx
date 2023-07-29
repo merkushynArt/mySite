@@ -21,9 +21,9 @@ export const Header = () => {
                   <span className='header__list-item--1'>Main</span>
                   <span className='header__list-item--2'>Main</span>
                </NavLink>
-               <NavLink className='header__list-item' to={"aboutme"}>
-                  <span className='header__list-item--1'>About me</span>
-                  <span className='header__list-item--2'>About me</span>
+               <NavLink className='header__list-item' to={"blog"}>
+                  <span className='header__list-item--1'>Blog</span>
+                  <span className='header__list-item--2'>Blog</span>
                </NavLink>
                <NavLink className='header__list-item' to={"portfolio"}>
                   <span className='header__list-item--1'>Portfolio</span>
