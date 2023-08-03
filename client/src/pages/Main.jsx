@@ -2,13 +2,16 @@ import React from 'react';
 import { Title } from '../components/Title.jsx';
 import { Button } from '../components/Button.jsx';
 import { PortfolioBlock } from '../components/PortfolioBlock.jsx';
+import { Posts } from '../components/Posts.jsx';
 import { FaCss3, FaHtml5 } from "react-icons/fa6";
 import { IoLogoJavascript, IoLogoReact } from "react-icons/io5";
 import { FaNode } from "react-icons/fa";
 import { BiLogoTypescript, BiLogoMongodb } from "react-icons/bi";
 import { TbApi } from "react-icons/tb";
 import { SiExpress } from "react-icons/si";
-import { Posts } from '../components/Posts.jsx';
+import { IoCallSharp } from "react-icons/io5";
+import { BsTelegram } from "react-icons/bs";
+import { CgMail } from "react-icons/cg";
 
 const words1 = [
    'Your idea is my web implementation', 
@@ -28,6 +31,7 @@ const wordsBlog = [
    'In free access: My thoughts',
    'In free access: My thoughts',
    'In free access: My thoughts'
+   
 ]
 
 
@@ -162,7 +166,28 @@ export const Main = () => {
             <Button words={wordsBlog} linkTo={'blog'}/>
          </section>
 
-         <section></section>
+         <section className='main-contacts'>
+            <div className="container">
+               <h3 className='title'>Contacts</h3>
+               <p className='main-contacts__text'>
+                  For discussing potential projects, collaboration, or any other inquiries, feel free to get in touch with me. I'm always ready to contribute to unique and interesting projects.
+               </p>
+               <div className="main-contacts__links">
+                  <a className='main-contacts__link' href="tel:+380958827306" target='_blank'>
+                     <IoCallSharp/>
+                     +380958827306
+                  </a>
+                  <a className='main-contacts__link' href="https://t.me/some_guy13" target='_blank'>
+                     <BsTelegram/>
+                     some_guy13
+                  </a>
+                  <a className='main-contacts__link' href="mailto::merkushynwrite@gmail.com" target='_blank'>
+                     <CgMail/>
+                     merkushynwrite@gmail.com
+                  </a>
+               </div>
+            </div>
+         </section>
       </div>
    );
 };

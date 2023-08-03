@@ -337,6 +337,24 @@ section {
    text-align: center;
    font-size: 30px;
 }
+/*==============================================================================*/
+.main-contacts__links {
+   display: flex;
+   padding: 10px;
+   gap: 20px;
+}
+
+.main-contacts__link {
+   display: flex;
+   gap: 5px;
+   align-items: center;
+   color: #fff;
+   text-decoration: none;
+}
+
+.main-contacts__link svg {
+   font-size: 26px;
+}
 /*==============================================================================*\
 #components
 \*==============================================================================*/
